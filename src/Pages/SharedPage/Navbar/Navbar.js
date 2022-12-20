@@ -30,8 +30,10 @@ const Navbar = () => {
             {
                 user?.uid && user?.email?<>
                 <Nav.Link> <Link to='/myReviews'>My Review</Link></Nav.Link> 
+                <Nav.Link><Link to='/addService'>Add service</Link></Nav.Link> 
+                
             <Nav.Link><Link  onClick={loginOutUser} >Logout</Link></Nav.Link> 
-            <Nav.Link><Link   >{user?.email}</Link></Nav.Link> 
+            <Nav.Link><Link   >{user?.displayName}</Link></Nav.Link> 
                 </>:<>
                 <Nav.Link> <Link to='/register'>Register</Link></Nav.Link>
                 <Nav.Link> <Link to='/login'>Login</Link></Nav.Link> 

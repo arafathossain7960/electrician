@@ -6,6 +6,7 @@ import Register from "../Pages/Authication/Register/Register";
 import Blogs from "../Pages/Blogs/Blogs";
 
 import Home from "../Pages/Home/Home";
+import AddService from "../Pages/Home/Services/AddService/AddService";
 import AllServices from "../Pages/Home/Services/Services&Reviews/AllServices/AllServices";
 import ServiceDetails from "../Pages/Home/Services/Services&Reviews/ServiceDetails/ServiceDetails";
 import AddReviews from "../Pages/Reviews/AddReviews/AddReviews";
@@ -50,6 +51,10 @@ export const router =createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/addService',
+                element:<AddService></AddService>
             },
             {
                 path:'/addReviews',

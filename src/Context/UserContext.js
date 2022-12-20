@@ -19,12 +19,7 @@ const signUpUserGoogle =()=>{
     setLoading(true);
     return signInWithPopup(auth, googleProvider)
     .then(result =>{
-        const email = result.user.email;
-        const fullName = result.user.displayName;
-        const imgUrl = result.user.photoURL;
-        const userInfo ={ fullName, email, imgUrl};
-        postUserInfoToDb(userInfo);
-        console.log(userInfo)
+      
     })
     .catch(error =>{
         console.log(error)
