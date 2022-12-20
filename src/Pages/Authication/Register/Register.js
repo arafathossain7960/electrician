@@ -1,26 +1,41 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UserContext';
+import { postUserInfoToDb } from '../../../Utilitis/userInfo';
 
 
 const Register = () => {
     const navigate =useNavigate();
 const {signUpUserGoogle, signUpUserWithEmailPassword}=useContext(AuthContext);
+    // const handleUserGoogle =()=>{
+    //     signUpUserGoogle
+    //     .then(result=>{
+    //         console.log(result.user)
+    //     })
+    //     .catch(error =>{
+    //         console.log(error)
+    //     })
+    // }
+
 
     const handleUserRegister =(e)=>{
         e.preventDefault();
+       
         const fullName = e.target.fullName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const imgUrl = e.target.imgUrl.value;
-        const userInfo = {fullName, email, password, imgUrl};
+         const userInfo = {fullName, email,imgUrl};
         signUpUserWithEmailPassword(email, password)
         .then(result =>{
-            console.log(result.user);
+          
             if(result?.user?.uid){
-                navigate('/home')
+                navigate('/home');
+                
+                    postUserInfoToDb(userInfo)
+              
             }
         })
         .catch(error=>{
@@ -67,7 +82,7 @@ const {signUpUserGoogle, signUpUserWithEmailPassword}=useContext(AuthContext);
            Register
         </Button>
         <small className='mx-2'>or</small>
-        <Button onClick={signUpUserGoogle } variant='info' className='btn btn-small'>
+        <Button onClick={signUpUserGoogle} variant='info' className='btn btn-small'>
         Register with google
         </Button>
     </Form>
