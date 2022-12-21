@@ -27,9 +27,16 @@ const AddReviews = () => {
        
         e.target.reset();
     }
-    console.log(reviewSuccess)
     return (
         <div className='w-50 mx-auto my-5 p-4 mb-3 border rounded shadow '>
+           
+           {reviewSuccess?.insertedId &&  <Toast className='py-3 my-3 mx-auto'>
+        <Link to='/allServices'><Toast.Header className='text-end' >
+        </Toast.Header></Link>
+      <Toast.Body className='text-success'>Review successfully added</Toast.Body>
+    </Toast>
+
+         }
             <Form.Group>
                 <Form.Text className='text-center'>
                     <h3>Add your reviews </h3>
@@ -39,7 +46,7 @@ const AddReviews = () => {
     
       <FloatingLabel controlId="floatingTextarea2" label="Add reviews">
         <Form.Control name='reviews'
-          as="textarea"
+          as="textarea" required
           placeholder="Leave a comment here"
           style={{ height: '100px' }}
         />
@@ -52,16 +59,7 @@ const AddReviews = () => {
       </Button>
          </Form>
 
-         {reviewSuccess.insertedId &&  <Toast>
-      <Toast.Header>
-        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
-        <strong className="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
-      </Toast.Header>
-      <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
-    </Toast>
-
-         }
+   
       </div>
     );
 };

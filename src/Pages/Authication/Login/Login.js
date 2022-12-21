@@ -19,12 +19,11 @@ const Login = () => {
 
     const handleUserLogin =(e)=>{
         e.preventDefault();
-        const fullName = e.target.fullName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const imgUrl = e.target.imgUrl.value;
+      
 
-        const userInfo = {fullName, email, password, imgUrl};
+        const userInfo = {email, password};
         loginUserEmailPassword(email, password)
         .then(result =>{
             navigate(from, {replace:true});
@@ -33,9 +32,6 @@ const Login = () => {
         .catch(error =>{
             console.log(error)
         })
-        
-
-       
     }
     return (
         <div className='w-50 mx-auto p-4 mb-3 border rounded shadow '>

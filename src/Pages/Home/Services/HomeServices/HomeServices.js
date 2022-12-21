@@ -13,7 +13,11 @@ const HomeServices = () => {
     return (
         <div className='d-flex w-75'>
             {
-                homeService.map(homeServiceCard => <HomeServiceCard homeServiceCard={homeServiceCard}></HomeServiceCard>)
+                homeService.map(homeServiceCard => <HomeServiceCard 
+                
+                    homeServiceCard={homeServiceCard}
+                    key={homeServiceCard._id}
+                    ></HomeServiceCard>)
             }
             <div>
                 <Link to='/allServices'>
