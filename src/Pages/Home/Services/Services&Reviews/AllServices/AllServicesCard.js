@@ -5,6 +5,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const AllServicesCard = ({allService}) => {
     const {description,_id, id,img_url,service_name, price, ratings
@@ -12,7 +14,12 @@ const AllServicesCard = ({allService}) => {
     return (
      <Col>
         <Card style={{width:'18rem'}}>
-        <Card.Img variant="top" src={img_url} />
+        <Card.Img variant="top" />
+        <PhotoProvider>
+      <PhotoView src={img_url}>
+        <img src={img_url} alt="" />
+      </PhotoView>
+    </PhotoProvider>
         <Card.Body>
           <Card.Title>{service_name}</Card.Title>
           <Card.Text>

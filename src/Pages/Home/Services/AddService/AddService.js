@@ -7,7 +7,6 @@ import Form from 'react-bootstrap/Form';
 
 
 const AddService = () => {
-    // const [addService, setAddService]=useState({});
    
     const HandleAddReviews =(e)=>{
         e.preventDefault();
@@ -25,20 +24,11 @@ const AddService = () => {
         })
         .then(res => res.json())
         .then(data => console.log(data))
-        // setAddService(addNewService)
        
     
         
     }
-    // useEffect(()=>{
-    //     fetch('http://localhost:5000/addService',{
-    //         method:"POST",
-    //         headers:{'Content-Type': 'application/json'},
-    //         body:JSON.stringify(addService)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    // },[]);
+  
     return (
         <div className='w-50 my-4 mx-auto p-4 mb-3 border rounded shadow '>
              <Form.Group controlId="formBasicTitle">
