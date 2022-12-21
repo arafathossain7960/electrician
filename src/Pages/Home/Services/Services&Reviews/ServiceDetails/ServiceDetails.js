@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import AddReviews from '../../../../Reviews/AddReviews/AddReviews';
+import { AuthContext } from '../../../../../Context/UserContext';
 import AllReviews from '../Reviews/AllReviews';
 
 const ServiceDetails = () => {
+    const {setServiceUniqueId}=useContext(AuthContext);
     const singleService = useLoaderData();
-    console.log(singleService)
     const {description,_id, id,img_url,service_name, price, ratings
     } =singleService;
+    setServiceUniqueId(_id);
     return (
         <>
         <div className='p-3 m-2'>

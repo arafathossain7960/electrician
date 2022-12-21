@@ -13,6 +13,7 @@ const auth = getAuth(app);
 const UserContext = ({children}) => {
     const [user, setUser]=useState({});
     const [loading, setLoading]=useState(true);
+    const [serviceUniqueId, setServiceUniqueId]=useState(null);
     
     // Sing up with google 
 const signUpUserGoogle =()=>{
@@ -54,7 +55,7 @@ const signUpUserGoogle =()=>{
      }
  },[])
  
- const userAuthInfo ={user, loading, signUpUserGoogle, signUpUserWithEmailPassword, loginUserEmailPassword, loginOutUser };
+ const userAuthInfo ={user, loading, serviceUniqueId,setServiceUniqueId, signUpUserGoogle, signUpUserWithEmailPassword, loginUserEmailPassword, loginOutUser };
     return (
         <AuthContext.Provider value={userAuthInfo}>
             {children}
