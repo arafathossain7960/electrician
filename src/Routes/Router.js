@@ -9,6 +9,7 @@ import Home from "../Pages/Home/Home";
 import AddService from "../Pages/Home/Services/AddService/AddService";
 import AllServices from "../Pages/Home/Services/Services&Reviews/AllServices/AllServices";
 import ServiceDetails from "../Pages/Home/Services/Services&Reviews/ServiceDetails/ServiceDetails";
+import NotFound from "../Pages/NotFound/NotFound";
 import AddReviews from "../Pages/Reviews/AddReviews/AddReviews";
 import MyReviews from "../Pages/Reviews/MyReviews";
 
@@ -67,6 +68,10 @@ export const router =createBrowserRouter([
                 element:<PrivetRoute>
                     <MyReviews></MyReviews>
                 </PrivetRoute>
+            },
+            {
+                path:'*',
+                element:<NotFound></NotFound>
             }
 
         ]
