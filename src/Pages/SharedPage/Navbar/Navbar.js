@@ -4,23 +4,19 @@ import { AuthContext } from '../../../Context/UserContext';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import   NavigationBar  from 'react-bootstrap/Navbar';
+import './Navbar.css';
 const Navbar = () => {
     const {loginOutUser, user}=useContext(AuthContext);
+    console.log(user)
     
     return (
         <div>
-            {/* <Link to='/home'>Home</Link>
-            <Link to='/allServices'>Service</Link>
-            <Link to='/blogs'>Blogs</Link>
-            <Link to='/reviews'>Review</Link>
-            <Link to='/login'>Login</Link>
-            <Link to='/register'>Register</Link>
-            <Link  onClick={loginOutUser} >Logout</Link>
-            <Link   >{user?.email}</Link> */}
+           
             <>
       <NavigationBar bg="dark" variant="dark">
-        <Container>
+        <Container className=''>
           <NavigationBar.Brand >Fast-Electro</NavigationBar.Brand>
+          <Container className='nav-link'>
           <Nav className="me-auto">
             <Nav.Link><Link to='/home'>Home</Link></Nav.Link>
             <Nav.Link> <Link to='/allServices'>Service</Link></Nav.Link>
@@ -33,7 +29,8 @@ const Navbar = () => {
                 <Nav.Link><Link to='/addService'>Add service</Link></Nav.Link> 
                 
             <Nav.Link><Link  onClick={loginOutUser} >Logout</Link></Nav.Link> 
-            <Nav.Link><Link   >{user?.displayName}</Link></Nav.Link> 
+            <Nav.Link><Link >{user?.displayName}</Link></Nav.Link> 
+            <img src={user?.photoURL} alt="" /> 
                 </>:<>
                 <Nav.Link> <Link to='/register'>Register</Link></Nav.Link>
                 <Nav.Link> <Link to='/login'>Login</Link></Nav.Link> 
@@ -41,6 +38,7 @@ const Navbar = () => {
             }
             
           </Nav>
+          </Container>
         </Container>
       </NavigationBar>
       

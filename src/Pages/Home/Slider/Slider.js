@@ -12,42 +12,42 @@ const Slider = () => {
       setIndex(selectedIndex);
     };
     return (
-        <div>
+        <div >
              <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
+      <Carousel.Item style={{height:'400px'}}>
         <img
-          className="d-block w-100 h-600 "
+          className="d-block w-100 h-400 "
           src={slider3}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Electric tools and Element</h3>
+          <p>Necessary Electric tools that mostly use for servicing   </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item style={{height:'400px'}}>
         <img
-          className="d-block w-100 h-600 "
+          className="d-block w-100 h-400 "
           src={slider1}
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Re-checkup</h3>
+          <p>Check up after repairing something electric mandatory. </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item style={{height:'400px'}}>
         <img
-          className="d-block w-100 h-75 "
+          className="d-block w-100 h-400 "
           src={slider2}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Set up new connection</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          New electric setup for your new house
           </p>
         </Carousel.Caption>
       </Carousel.Item>

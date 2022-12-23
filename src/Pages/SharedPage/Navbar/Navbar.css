@@ -1,0 +1,13 @@
+.nav-link a{
+    text-decoration: none;
+    transition: 0.8s;
+}
+.nav-link a:hover{
+    color: goldenrod;
+}
+.nav-link img{
+    width: 40px;
+    height: 40px;
+    margin-left:20px ;
+    border-radius: 50%;
+}

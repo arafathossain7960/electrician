@@ -1,13 +1,18 @@
 import React from 'react';
 
-const MySingleReview = ({myReview}) => {
+const MySingleReview = ({myReview, setMyReviews}) => {
     const {_id, email, review}=myReview;
 
     const handleReviewDelete =(id)=>{
-        alert('Are you confirm this review will delete permanently');
+        const agree = window.confirm('Are you sure you want to delete this review?')
+      if(agree){
         fetch(`http://localhost:5000/myReview/${id}`,{method:'DELETE'} )
-       .then(res => res.json())
-       .then(data => console.log(data))
+        .then(res => res.json())
+        .then(data => {
+           console.log(data)
+        })
+      }
+      
        
 
     }

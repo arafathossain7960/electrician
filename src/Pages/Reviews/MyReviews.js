@@ -16,6 +16,7 @@ const MyReviews = () => {
                 myReviews.map(myReview => <MySingleReview
                 key={myReview._id}
                 myReview={myReview}
+                setMyReviews={setMyReviews}
                 ></MySingleReview>)
             }
         </div>

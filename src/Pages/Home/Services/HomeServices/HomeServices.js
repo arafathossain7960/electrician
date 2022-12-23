@@ -11,7 +11,7 @@ const HomeServices = () => {
         .then(data => setHomeService(data))
     },[])
     return (
-        <div className='d-flex w-75'>
+        <div style={{width:'85%'}} className='d-flex  my-5'>
             {
                 homeService.map(homeServiceCard => <HomeServiceCard 
                 
@@ -19,9 +19,9 @@ const HomeServices = () => {
                     key={homeServiceCard._id}
                     ></HomeServiceCard>)
             }
-            <div>
+            <div className='d-flex  align-items-center'>
                 <Link to='/allServices'>
-                <button>See more</button>
+                <button className='btn btn-info'> &#8827;</button>
                 </Link>
             
             </div>
