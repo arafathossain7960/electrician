@@ -12,7 +12,9 @@ const AddReviews = () => {
         e.preventDefault();
         const review = e.target.reviews.value;
         const email = user.email;
-        const userReview = {review, email, serviceUniqueId};
+        const userImg = user.photoURL;
+       
+        const userReview = {review, userImg, email, serviceUniqueId};
     
 
         fetch('http://localhost:5000/addReview',{
@@ -54,7 +56,7 @@ const AddReviews = () => {
           <Button variant="primary" type="submit">
         Submit
       </Button>
-          <Button variant="dark" type="submit">
+          <Button className='mx-2 text-light' variant="info" type="submit">
         <Link to='/home'>Go home</Link>
       </Button>
          </Form>

@@ -7,7 +7,7 @@ import   NavigationBar  from 'react-bootstrap/Navbar';
 import './Navbar.css';
 const Navbar = () => {
     const {loginOutUser, user}=useContext(AuthContext);
-    console.log(user)
+    
     
     return (
         <div>

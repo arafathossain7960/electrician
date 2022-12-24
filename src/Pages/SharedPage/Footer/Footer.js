@@ -25,7 +25,7 @@ const Footer = () => {
            </div>
           
           </div>
-          <small>All copy &#169; Right 2022 by <b>fastElector</b> </small>
+          <small className='text-muted'>All copy &#169; Right 2022 by <b>fastElector</b> </small>
         </div>
     );
 };

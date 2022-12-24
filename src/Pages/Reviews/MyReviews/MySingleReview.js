@@ -17,10 +17,10 @@ const MySingleReview = ({myReview, setMyReviews}) => {
 
     }
     return (
-        <div>
-            <small>{email}</small>
+        <div className='my-2 p-3 d-flex justify-content-between shadow'>
+            
             <p>{review}</p>
-            <button onClick={()=>handleReviewDelete(_id)}>Delete Review</button>
+            <button className='btn btn-warning btn-sm' onClick={()=>handleReviewDelete(_id)}>Delete Review</button>
         </div>
     );
 };

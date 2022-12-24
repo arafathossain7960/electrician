@@ -7,7 +7,7 @@ import { Row } from 'react-bootstrap';
 const AllServices = () => {
     const allServices = useLoaderData();
     return (
-        <Container>
+        <Container className='my-4'>
                <Row>
            {
             allServices.map(allService => <AllServicesCard 
