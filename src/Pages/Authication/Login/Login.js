@@ -28,7 +28,7 @@ const Login = () => {
         .then(result =>{
             // const currentUser = result.user.email;
             //jwt token
-            // fetch('http://localhost:5000/jwt',{
+            // fetch('https://fast-electro-server-side.vercel.app/jwt',{
             //     method:'POST',
             //     headers:{
             //         'content-type':'application/json'

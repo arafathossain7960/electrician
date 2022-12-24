@@ -17,7 +17,7 @@ const AddService = () => {
         const description= e.target.description.value;
         const addNewService = {service_name,img_url,description,price};
         
-        fetch('http://localhost:5000/addService',{
+        fetch('https://fast-electro-server-side.vercel.app/addService',{
             method:"POST",
             headers:{'Content-Type': 'application/json'},
             body:JSON.stringify(addNewService)

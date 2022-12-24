@@ -6,7 +6,7 @@ import AlReview from '../../../../Reviews/AddReviews/AlReview';
 const AllReviews = () => {
     const [allReviews , setAllReviews]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allReviews')
+        fetch('https://fast-electro-server-side.vercel.app/allReviews')
         .then(res => res.json())
         .then(data => setAllReviews(data))
     },[])

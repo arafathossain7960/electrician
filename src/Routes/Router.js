@@ -30,14 +30,14 @@ export const router =createBrowserRouter([
             {
                 path:'/allServices',
                 loader:()=>{
-                   return fetch('http://localhost:5000/allServices')
+                   return fetch('https://fast-electro-server-side.vercel.app/allServices')
                 } ,
                 element:<AllServices></AllServices>
             },
             {
                 path:'/serviceDetails/:serviceId',
                 loader:({params})=>{
-                    return fetch(`http://localhost:5000/serviceDetails/${params.serviceId}`)
+                    return fetch(`https://fast-electro-server-side.vercel.app/serviceDetails/${params.serviceId}`)
                 },
                 element:<ServiceDetails></ServiceDetails>
             },

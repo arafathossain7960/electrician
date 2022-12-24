@@ -18,7 +18,7 @@ const AddReviews = () => {
         const userReview = {review, userImg, email,time, serviceUniqueId};
     
 
-        fetch('http://localhost:5000/addReview',{
+        fetch('https://fast-electro-server-side.vercel.app/addReview',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
