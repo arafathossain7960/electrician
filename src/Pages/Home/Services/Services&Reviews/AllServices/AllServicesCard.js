@@ -15,11 +15,15 @@ const AllServicesCard = ({allService}) => {
      <Col>
         <Card style={{width:'18rem'}}>
         <Card.Img variant="top" />
+
+
+
         <PhotoProvider>
       <PhotoView src={img_url}>
         <img src={img_url} alt="" />
       </PhotoView>
     </PhotoProvider>
+
         <Card.Body>
           <Card.Title>{service_name}</Card.Title>
           <Card.Text>

@@ -55,7 +55,9 @@ export const router =createBrowserRouter([
             },
             {
                 path:'/addService',
-                element:<AddService></AddService>
+                element:<PrivetRoute>
+                    <AddService></AddService>
+                </PrivetRoute> 
             },
             {
                 path:'/addReviews',

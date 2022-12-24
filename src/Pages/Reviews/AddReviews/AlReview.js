@@ -17,6 +17,7 @@ const AlReview = ({ allReview}) => {
            <p>Email: {allReview.email}</p>
             <img style={reviewImg} className='reviewImg' src={allReview?.userImg} alt="" />
            </div>
+           <span style={{fontSize:'8px'}} >Time: {allReview.time}</span>
         </div>
         </Col>
     );

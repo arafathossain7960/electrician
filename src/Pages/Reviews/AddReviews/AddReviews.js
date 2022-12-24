@@ -13,8 +13,9 @@ const AddReviews = () => {
         const review = e.target.reviews.value;
         const email = user.email;
         const userImg = user.photoURL;
+        const time = new Date();
        
-        const userReview = {review, userImg, email, serviceUniqueId};
+        const userReview = {review, userImg, email,time, serviceUniqueId};
     
 
         fetch('http://localhost:5000/addReview',{
